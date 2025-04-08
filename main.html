@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalucia Chamber of Commerce</title>
+    <meta name="author" content="Virginia Haedo">
+    <meta name="description"
+        content="The chamber of Commerce of Andalucia provides information to promote the cultural and natual richness of our community.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/index.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Andalucia Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://multimedia.andalucia.org/media/18EAC9E01CED48C6A5267D28B6733B8C/img/8E990CD8927D4A8DBD98BD39F989C835/MA_Puerto_Muelle_Uno_17.jpg?responsive">
+    <meta property="og:url" content="https://vbarindelli.github.io/wdd230/">
+</head>
+
+<body>
+
+    <header>
+        <h1>Andalucia Chamber of Commerce</h1>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li class="active"><a href="https://vbarindelli.github.io/wdd230/chamber/index.html">Home</a></li>
+                <li><a href="https://vbarindelli.github.io/wdd230/chamber/discover.html">Discover</a></li>
+                <li><a href="https://vbarindelli.github.io/wdd230/chamber/directory.html">Directory</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="bannerContent">
+                <div class="bannerText">
+                    <strong>You are invited!</strong> Join the chamber of commerce meet and greet on Wednesday at 7:00
+                    p.m.
+                </div>
+                <button class="bannerClose" type="button">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="button-wrapper">
+                <a class="cta-button" href="https://vbarindelli.github.io/wdd230/chamber/join.html">Join the
+                    Chamber!</a>
+            </div>
+            <picture>
+                <source media="(min-width: 600px)" srcset="images/large-andalucia.webp">
+                <img src="images/small-andalucia.webp" alt="Andalucia province in Spain map" loading="lazy"
+                    width="1020">
+            </picture>
+        </div>
+        <div class="containerIndex">
+
+            <section class="events">
+                <h2>Current Events</h2>
+                <hr>
+                <p>In Calle Larios, the lights and music shows are staged at 6.30pm, 8pm and 10pm (except 24 and 31
+                    December).
+                    The festive decorations in the city centre can be enjoyed between 6.30pm and midnight on Mondays,
+                    Tuesdays, Wednesdays and Sundays.
+                </p>
+                <hr>
+
+            </section>
+            <section>
+                <div class="weather">
+                    <h2>Weather</h2>
+                    <p>The current temperature in Malaga, Spain is <span id="current-temp"></span>
+                    <figure>
+                        <img id="weather-icon" src="#" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <hr>Expected temperature for the next three days:
+                    <hr>
+                    </p>
+                    <p class="forecast"> <span id="forecast1"></span><span id="forecast2"></span><span
+                            id="forecast3"></span> </p>
+                </div>
+            </section>
+
+            <section class="spotlights">
+                <h2>Spotlight Advertisements</h2>
+                <div class="featuredContent">
+                    <div class="featured">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <p> <img class="icon" src="images/spain-country-flag-icon-sm.jpg" alt="Spain Flag icon." width="21">
+                Andalucia Chamber of Commerce | Av. Aragon 3 - Malaga Spain | info@andalucia.org</p>
+        </div>
+        <p>©<span id="currentyear"></span> - Virginia Haedo | WDD 230 Project</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

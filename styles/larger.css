@@ -1,0 +1,181 @@
+@media screen and (min-width: 1020px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .featuredContent {
+        position: relative;
+        height: auto;
+        display: grid;
+
+    }
+
+    .featured {
+        display: flex;
+    }
+
+    .featured .memberSection {
+        min-width: 200px;
+        max-width: 300px;
+        min-height: 280px;
+    }
+
+    .containerIndex {
+        position: relative;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .events {
+        grid-column: 1/3;
+        background: rgba(252, 252, 252, 0.8);
+        height: 250px;
+        color: black;
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        margin: 1em;
+
+    }
+
+    .weather {
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        background: rgba(252, 252, 252, 0.8);
+        color: black;
+        margin: 1em;
+    }
+
+    h2 {
+        padding: 0.5em;
+        color: beige;
+
+    }
+
+    .spotlights {
+        grid-column: 1/4;
+    }
+
+    picture img {
+        max-width: 80%;
+
+    }
+
+    .container-discover {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2em;
+        ;
+    }
+
+    .images {
+        grid-column: 2/4;
+        grid-row: 1/8;
+    }
+
+    .information {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .images img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+
+    img:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+
+    #containerJoin {
+        display: grid;
+        grid-template-columns: minmax(0, 700px) minmax(0, 600px);
+    }
+
+    .wf1 {
+        grid-column: 1/2;
+    }
+
+    #benefits {
+        display: inline-table;
+        grid-column: 2/3;
+
+    }
+
+    #directory {
+        margin: auto;
+
+    }
+
+    .cards {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        align-items: center;
+    }
+
+    .grid section {
+        margin: auto;
+        padding: 1.5rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: var(--borderRadius);
+        text-align: center;
+        max-width: 300px;
+        min-width: 300px;
+        height: 250px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list section {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        margin: 0;
+        padding: 0.25rem;
+        background-color: #eee;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+        min-height: auto;
+    }
+
+
+}
