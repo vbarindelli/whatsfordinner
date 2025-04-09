@@ -33,54 +33,17 @@
         <nav>
             <ul class="navigation">
                 <li><a href="https://vbarindelli.github.io/whatsfordinner/main.html">Home</a></li>
-                <li class="active"><a href="https://vbarindelli.github.io/whatsfordinner/discover.html">Discover</a>
-                </li>
-                <li><a href="https://vbarindelli.github.io/whatsfordinner/mymeals.html">My Meals</a></li>
+                <li><a href="https://vbarindelli.github.io/whatsfordinner/discover.html">Discover</a></li>
+                <li class="active"><a href="https://vbarindelli.github.io/whatsfordinner/mymeals.html">My Meals</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="container-discover">
-            <section class="images">
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-
-            </section>
-            <section class="information">
-                <section class="card">
-                    <h2>Nutrition Tip</h2>
-                    <p></p>
-                </section>
-                <section class="card">
-                    <h2>Recipes</h2>
-                    <ul>
-                        <li>Recipe 1</li>
-                        <li>Recipe 2</li>
-                        <li>Recipe 3</li>
-                    </ul>
-                </section>
-                <section class="card">
-                    <h2></h2>
-                </section>
-                <section class="card">
-                    <h2>Visit</h2>
-                    <p><span id="lastVisit"></span>
-                </section>
-            </section>
+    <main id="directory">
+        <div id="gridList">
+            <button id="grid">⏹️Grid</button>
+            <button id="list">📄List</button>
         </div>
+        <div class="cards grid"></div>
     </main>
     <footer>
         <div class="footerContainer">
