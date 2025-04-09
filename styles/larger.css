@@ -46,7 +46,7 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .events {
+    .description {
         grid-column: 1/3;
         background: rgba(252, 252, 252, 0.8);
         height: 250px;
@@ -57,7 +57,7 @@
 
     }
 
-    .weather {
+    .calendar {
         border: 5px solid rgba(0, 0, 0, 0.1);
         border-radius: 6px;
         background: rgba(252, 252, 252, 0.8);

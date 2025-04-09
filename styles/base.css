@@ -124,7 +124,7 @@ footer {
 }
 
 .icon {
-    width: 20px;
+    width: 120px;
     height: auto;
     box-shadow: none;
     border: none;
@@ -232,7 +232,7 @@ body {
     background-color: #777;
 }
 
-.weather {
+.calendar {
     display: block;
     text-align: center;
 }
