@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Andalucia Chamber of Commerce</title>
+    <title>What´s for dinner?</title>
     <meta name="author" content="Virginia Haedo">
-    <meta name="description" content="Form to join the Andalucia Chamber of Commerce directory.">
+    <meta name="description" content="A meal planning tool to help the organization of the household.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -19,20 +20,21 @@
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Andalucia Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image"
-        content="https://multimedia.andalucia.org/media/18EAC9E01CED48C6A5267D28B6733B8C/img/8E990CD8927D4A8DBD98BD39F989C835/MA_Puerto_Muelle_Uno_17.jpg?responsive">
-    <meta property="og:url" content="https://vbarindelli.github.io/wdd230/">
+    <meta property="og:image" content="https://noahhelps.org/wp-content/uploads/2021/03/March_Meal-Prep.jpeg">
+    <meta property="og:url" content="https://vbarindelli.github.io/whatsfordinner/main">
 </head>
 
 <body>
+
     <header>
-        <h1>Andalucia Chamber of Commerce</h1>
+        <h1>What's for dinner? <img class="icon" src="images/balanced-diet_6774898 larger.png" alt="balanced diet icon"
+                width="128"></h1>
         <a id="menu" href="#"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="https://vbarindelli.github.io/wdd230/chamber/index.html">Home</a></li>
-                <li><a href="https://vbarindelli.github.io/wdd230/chamber/discover.html">Discover</a></li>
-                <li><a href="https://vbarindelli.github.io/wdd230/chamber/directory.html">Directory</a></li>
+                <li class="active"><a href="https://vbarindelli.github.io/whatsfordinner/main.html">Home</a></li>
+                <li><a href="https://vbarindelli.github.io/whatsfordinner/discover.html"></a>">Discover</a></li>
+                <li><a href="">My Meals</a></li>
             </ul>
         </nav>
     </header>
@@ -40,30 +42,22 @@
         <div id="containerJoin">
             <form method="get" action="thankyou.html" class="wf1">
                 <fieldset>
-                    <legend>Aplicant Information</legend>
+                    <legend>Member Information</legend>
                     <label> First Name* <input type="text" name="fname" id="fname" required></label>
                     <label> Last Name* <input type="text" name="lname" id="lname" required></label>
-                    <label> Tittle/Position <input type="text" pattern="[a-zA-Z\s\-]{7,}" name="position" id="position"
-                            title="Letters, hyphens, spaces. At least 7 characters long."></label>
                     <label> Email* <input type="email" name="email" id="email" placeholder="someone@gmail.com"
                             required></label>
-                    <label> Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
-                    <label> Business/Organization Name* <input type="text" name="org" id="org" required></label>
+
                 </fieldset>
                 <fieldset>
                     <legend>Membership</legend>
-                    <label><input type="radio" name="membership" value="NP">NP (non profit organization. No
-                        fee.)</label>
+                    <label><input type="radio" name="membership" value="free">Free</label>
                     <label><input type="radio" name="membership" value="intermediate">Bronze</label>
                     <label><input type="radio" name="membership" value="advanced">Silver</label>
                     <label><input type="radio" name="membership" value="advanced">Gold</label>
                 </fieldset>
-                <fieldset>
-                    <legend> Business Description</legend>
-                    <label for="description"><textarea id="description" name="description"></textarea></label>
-                    <label><input type="hidden" name="today" id="timeS" value=""></label>
-                </fieldset>
-                <input type="submit" value="Join the Chamber">
+               
+                <input type="submit" value="Join the community">
             </form>
 
             <table id="benefits">
@@ -74,7 +68,7 @@
                     </tr>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">NP Free</th>
+                        <th scope="col">Free</th>
                         <th scope="col">Bronze $50/yr</th>
                         <th scope="col">Silver $60/yr</th>
                         <th scope="col">Gold $70/yr</th>
@@ -82,35 +76,35 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Cultural events information</td>
+                        <td>XXXXXX</td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>Weekly trainings</td>
+                        <td>XXXXXXX</td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>Focal advertising</td>
+                        <td>XXXXXX/td>
                         <td>❌</td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>Monthly networking luncheon</td>
+                        <td>XXXXXXX</td>
                         <td>❌</td>
                         <td>❌</td>
                         <td>✔️</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>Discount card</td>
+                        <td>XXXXXXXX</td>
                         <td>❌</td>
                         <td>❌</td>
                         <td>❌</td>
@@ -122,10 +116,10 @@
     </main>
     <footer>
         <div class="footerContainer">
-            <p> <img class="icon" src="images/spain-country-flag-icon-sm.jpg" alt="Spain Flag icon." width="21">
-                Andalucia Chamber of Commerce | Av. Aragon 3 - Malaga Spain | info@andalucia.org</p>
+            <p>
+                What's for Dinner | info@whatsfordinner.com</p>
         </div>
-        <p>©<span id="currentyear"></span> - Virginia Haedo | WDD 230 Project</p>
+        <p>©<span id="currentyear"></span> - Virginia Haedo | WDD 330 Project</p>
         <p><span id="lastModified"></span></p>
     </footer>
 </body>
