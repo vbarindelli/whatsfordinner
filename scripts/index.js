@@ -30,13 +30,13 @@ const listbutton = document.querySelector("#list");
 // let modified = new Date(document.lastModified);
 // lastModified.innerHTML = `Last Modification: ${modified}</span>`;
 
-// const mainnav = document.querySelector('.navigation');
-// const hamburger = document.querySelector('#menu');
+const mainnav = document.querySelector('.navigation');
+const hamburger = document.querySelector('#menu');
 
-// hamburger.addEventListener('click', () => {
-//     mainnav.classList.toggle('show');
-//     hamburger.classList.toggle('show');
-// })
+hamburger.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hamburger.classList.toggle('show');
+})
 
 // let welcomeMsg = "Welcome! Let us know if you have any questions.";
 // lastVisitObj = window.localStorage.getItem("lastVisitDate");
