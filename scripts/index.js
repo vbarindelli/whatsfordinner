@@ -38,12 +38,15 @@ function displayResults(data) {
         let card = document.createElement('section');
         let name = document.createElement('h3');
         let description = document.createElement('p');
-
         let recipeImg = document.createElement('img');
+        let recipeButton = document.createElement('button');
+
 
         card.setAttribute('class', 'recipeSection');
         name.textContent = `${recipe.strMeal}`;
         description.textContent = `${recipe.strCategory}`;
+        recipeButton.textContent = 'view full recipe';
+        recipeButton.classList.add('recipeButton');
 
         recipeImg.setAttribute('src', recipe.strMealThumb);
         recipeImg.setAttribute('alt', 'thumbnail_alt_text');
@@ -56,21 +59,59 @@ function displayResults(data) {
         card.appendChild(name);
         card.appendChild(recipeImg);
         card.appendChild(description);
+        card.appendChild(recipeButton);
 
 
 
         if (cards) {
             cards.appendChild(card);
+        }
+        if (premium_cards) {
+            premium_cards.appendChild(card);
         };
 
+        recipeButton.addEventListener('click', () => {
+            showModal(recipe);
+        });
     });
 
 };
 
+function showModal(recipe) {
+    const modal = document.querySelector('#recipeModal');
+    const modalContent = document.querySelector('#modalContent');
+
+    let ingredientsList = '<ul>';
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = recipe[`strIngredient${i}`];
+        const measure = recipe[`strMeasure${i}`];
+        if (ingredient && ingredient.trim() !== '') {
+            ingredientsList += `<li>${measure ? measure : ''} ${ingredient}</li>`;
+        }
+    }
+    ingredientsList += '</ul>';
+
+    modalContent.innerHTML = `
+        <h2>${recipe.strMeal}</h2>
+        <p><strong>Category:</strong> ${recipe.strCategory}</p>
+        <p><strong>Area:</strong> ${recipe.strArea}</p>
+        <p><strong>Ingredients:</strong></p>
+        ${ingredientsList}
+        <p><strong>Instructions:</strong> ${recipe.strInstructions}</p>
+        <a href="${recipe.strYoutube}" target="_blank">Watch on YouTube</a>
+    `;
+    modal.style.display = 'block';
+}
 
 
+window.addEventListener('click', (e) => {
+    const modal = document.querySelector('#recipeModal');
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
-const ingredients = document.querySelector('#ingredients');
+
 
 const mainnav = document.querySelector('.navigation');
 const hamburger = document.querySelector('#menu');

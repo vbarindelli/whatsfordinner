@@ -43,7 +43,23 @@
             <button id="grid">⏹️Grid</button>
             <button id="list">📄List</button>
         </div>
+        <select id="filtered" title="Choose a data filter.">
+            <option value="" disabled selected>Search Recipes by</option>
+            <option value="firstLetter">First Letter</option>
+            <option value="ingredient">ingredient</option>
+            <option value="type">Category</option>
+            <option value="without">Without</option>
+         
+          </select>
+          <div>
+            <label for="userInput"></label>
+            <input type="text" id="userInput" name="userInput">
+          </div>
+          
         <div class="cards grid"></div>
+        <div id="recipeModal" class="modal">
+            <div class="modal-content" id="modalContent"></div>
+        </div>
     </main>
     <footer>
         <div class="footerContainer">
