@@ -179,7 +179,17 @@ document.addEventListener('click', (e) => {
         recipeCard.querySelector('.recipeButton')?.remove();
         recipeCard.querySelector('.addToCalendarButton')?.remove();
 
+        let removeButton = document.createElement('button');
+        removeButton.textContent = 'X';
+        removeButton.classList.add('removeButton');
+        recipeCard.appendChild(removeButton);
+
+
         selectedDay.appendChild(recipeCard);
+
+        removeButton.addEventListener('click', () => {
+            recipeCard.remove();
+        })
     }
 });
 
