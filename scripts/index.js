@@ -202,7 +202,7 @@ document.addEventListener('click', (e) => {
 
         const recipeCard = e.target.closest('.recipeSection').cloneNode(true);
 
-        // Remove unnecessary buttons
+
         recipeCard.querySelector('.recipeButton')?.remove();
         recipeCard.querySelector('.addToCalendarButton')?.remove();
 
