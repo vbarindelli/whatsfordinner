@@ -82,7 +82,18 @@ function displayResults(data) {
 
 function showModal(recipe) {
     const modal = document.querySelector('#recipeModal');
-    const modalContent = document.querySelector('#modalContent');
+    modal.innerHTML = ''; // clear previous content
+
+    const modalContent = document.createElement('div');
+    modalContent.setAttribute('id', 'modalContent');
+
+    let closeButton = document.createElement('button');
+    let name = document.createElement('h2');
+    let category = document.createElement('p');
+    let area = document.createElement('p');
+    let instructions = document.createElement('p');
+    let ingredients = document.createElement('p');
+    let video = document.createElement('a');
 
     let ingredientsList = '<ul>';
     for (let i = 1; i <= 20; i++) {
@@ -93,28 +104,44 @@ function showModal(recipe) {
         }
     }
     ingredientsList += '</ul>';
+    ingredients.innerHTML = ingredientsList;
 
-    modalContent.innerHTML = `
-        <h2>${recipe.strMeal}</h2>
-        <p><strong>Category:</strong> ${recipe.strCategory}</p>
-        <p><strong>Area:</strong> ${recipe.strArea}</p>
-        <p><strong>Ingredients:</strong></p>
-        ${ingredientsList}
-        <p><strong>Instructions:</strong> ${recipe.strInstructions}</p>
-        <a href="${recipe.strYoutube}" target="_blank">Watch on YouTube</a>
-    `;
-    modal.style.display = 'block';
+    name.textContent = recipe.strMeal;
+    category.textContent = `Category: ${recipe.strCategory}`;
+    area.textContent = `Area: ${recipe.strArea}`;
+    instructions.textContent = recipe.strInstructions;
+    video.textContent = "Watch Video";
+    video.setAttribute('href', recipe.strYoutube);
+    video.setAttribute('target', '_blank');
+
+    closeButton.textContent = 'X';
+    closeButton.classList.add('closeButton');
+
+    closeButton.addEventListener('click', () => {
+        modal.classList.remove('show');
+    });
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(name);
+    modalContent.appendChild(category);
+    modalContent.appendChild(area);
+    modalContent.appendChild(ingredients);
+    modalContent.appendChild(instructions);
+    modalContent.appendChild(video);
+
+    modal.appendChild(modalContent);
+    modal.classList.add('show');
+
 }
+
 
 
 window.addEventListener('click', (e) => {
     const modal = document.querySelector('#recipeModal');
     if (e.target === modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('show');
     }
 });
-
-
 
 const mainnav = document.querySelector('.navigation');
 const hamburger = document.querySelector('#menu');
