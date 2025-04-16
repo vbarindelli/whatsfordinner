@@ -28,7 +28,6 @@ const options = {
 async function apiFetch(url) {
     try {
         const response = await fetch(url, options);
-        console.log(response);
         const result = await response.json();
         console.log(result);
         displayResults(result);
