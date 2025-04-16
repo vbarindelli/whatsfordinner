@@ -200,23 +200,75 @@ document.addEventListener('click', (e) => {
             return;
         }
 
-        const recipeCard = e.target.closest('.recipeSection').cloneNode(true);
+        const recipeCard = e.target.closest('.recipeSection');
+        const recipeData = {
+            name: recipeCard.querySelector('h3').textContent,
+            category: recipeCard.querySelector('p').textContent,
+            img: recipeCard.querySelector('img').src,
+            dayId: selectedDay.id // e.g. "day-monday"
+        };
 
+        let savedRecipes = JSON.parse(localStorage.getItem('selectedRecipes')) || [];
+        savedRecipes.push(recipeData);
+        localStorage.setItem('selectedRecipes', JSON.stringify(savedRecipes));
 
-        recipeCard.querySelector('.recipeButton')?.remove();
-        recipeCard.querySelector('.addToCalendarButton')?.remove();
-
-        let removeButton = document.createElement('button');
-        removeButton.textContent = 'X';
-        removeButton.classList.add('removeButton');
-        recipeCard.appendChild(removeButton);
-
-
-        selectedDay.appendChild(recipeCard);
-
-        removeButton.addEventListener('click', () => {
-            recipeCard.remove();
-        })
+        alert(`${recipeData.name} added to ${selectedDay.id.replace('day-', '')}!`);
     }
 });
 
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedRecipes = JSON.parse(localStorage.getItem('selectedRecipes')) || [];
+
+    savedRecipes.forEach(recipe => {
+        const card = document.createElement('section');
+        card.classList.add('recipeSection');
+
+        const name = document.createElement('h3');
+        const category = document.createElement('p');
+        const img = document.createElement('img');
+        const removeButton = document.createElement('button');
+
+        name.textContent = recipe.name;
+        category.textContent = recipe.category;
+        img.src = recipe.img;
+        img.width = 200;
+
+        removeButton.textContent = 'X';
+        removeButton.classList.add('removeButton');
+
+        card.appendChild(name);
+        card.appendChild(img);
+        card.appendChild(category);
+        card.appendChild(removeButton);
+
+        // Find the correct day in the calendar using the dayId
+        const dayContainer = document.getElementById(recipe.dayId);
+        if (dayContainer) {
+            dayContainer.appendChild(card);
+        } else {
+            console.warn(`Day container "${recipe.dayId}" not found.`);
+        }
+
+        // Remove recipe from UI + localStorage
+        removeButton.addEventListener('click', () => {
+            card.remove();
+            const updatedRecipes = savedRecipes.filter(r => {
+                return !(r.name === recipe.name && r.dayId === recipe.dayId);
+            });
+            localStorage.setItem('selectedRecipes', JSON.stringify(updatedRecipes));
+        });
+    });
+});
+
+function clearDay(dayId) {
+    const savedRecipes = JSON.parse(localStorage.getItem('selectedRecipes')) || [];
+    const updatedRecipes = savedRecipes.filter(recipe => recipe.dayId !== dayId);
+    localStorage.setItem('selectedRecipes', JSON.stringify(updatedRecipes));
+    location.reload(); // or remove from DOM manually
+}
+
+document.querySelector('#clearMeals').addEventListener('click', () => {
+    localStorage.removeItem('selectedRecipes');
+    location.reload(); // or manually remove cards from DOM
+});
