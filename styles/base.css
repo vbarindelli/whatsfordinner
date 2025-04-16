@@ -123,12 +123,6 @@ footer {
     text-align: center;
 }
 
-.icon {
-    width: 120px;
-    height: auto;
-    box-shadow: none;
-    border: none;
-}
 
 .hero {
     position: relative;
@@ -142,11 +136,6 @@ footer {
     border-radius: var(--borderRadius);
     padding: 0.3em;
 
-}
-
-.hero img:hover {
-    -webkit-filter: none;
-    filter: none;
 }
 
 hr {
@@ -212,9 +201,6 @@ body {
     display: none;
 }
 
-
-
-
 .cta-button {
     position: absolute;
     top: 50px;
@@ -237,25 +223,6 @@ body {
     text-align: center;
 }
 
-#weather-icon {
-    border: none;
-    width: 60px;
-    height: auto;
-    box-shadow: none;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    padding: 1rem;
-    grid-row: 2/3;
-}
-
-#weatherFig {
-    max-width: 100px;
-    align-items: center;
-}
 
 p {
     text-align: center;
@@ -264,15 +231,6 @@ p {
 
 h3 {
     text-align: center;
-}
-
-
-#cardImg {
-    max-width: 420px;
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
-    margin: 1em;
-
 }
 
 li {
@@ -291,30 +249,9 @@ a {
     overflow-wrap: break-word;
 }
 
-.forecast {
-    display: flex;
-    max-width: fit-content;
-    margin: auto;
-}
-
-#forecast1,
-#forecast2,
-#forecast3 {
-    margin: 1em;
-    padding: 1em;
-}
 
 /* -------------------------------------------------------------
 ------------------------------------------------------------- */
-
-.interest {
-    width: 100%;
-    height: auto;
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
-    margin: 1.5em 1em 0 1em;
-}
-
 
 
 .card {
@@ -325,10 +262,7 @@ a {
 
 /* -------------------------------------------------------------
 ------------------------------------------------------------- */
-.container-discover {
-    margin: auto;
-    text-align: center;
-}
+
 
 
 label {
@@ -481,16 +415,6 @@ p {
 ------------------------------- */
 
 
-.memberSection {
-    margin: auto;
-    padding: 1.5rem;
-    background-color: #eee;
-    border: 1px solid #bbb;
-    border-radius: var(--borderRadius);
-    text-align: center;
-    min-width: 400px;
-    max-width: 400px;
-}
 
 #gridList {
     margin: 1rem auto;
@@ -507,14 +431,6 @@ p {
     border-radius: var(--borderRadius);
 }
 
-/* 
-img {
-    width: auto;
-    box-shadow: 0 0 30px #777;
-    border: 1px solid #333;
-    border-radius: var(--borderRadius);
-    padding: 0.3em;
-} */
 
 .grid {
     display: grid;
@@ -551,27 +467,7 @@ img {
     background-color: var(--forelight);
 }
 
-.memberSection h3 {
-    font-size: 1.5rem;
-}
 
-.memberSection p {
-    font-weight: 600;
-    font-size: smaller;
-    margin-bottom: 1em;
-}
-
-.memberSection a {
-    font-size: 0.85rem;
-    letter-spacing: 1.1pt;
-    overflow-wrap: break-word;
-}
-
-.memberSection a:hover {
-    color: rgb(189, 55, 55);
-
-    border-radius: var(--borderRadius);
-}
 
 #directory img {
     height: 75px;
