@@ -1,3 +1,14 @@
+
+//header navigation
+
+const mainnav = document.querySelector('.navigation');
+const hamburger = document.querySelector('#menu');
+
+hamburger.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hamburger.classList.toggle('show');
+})
+
 const cards = document.querySelector('.cards');
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");

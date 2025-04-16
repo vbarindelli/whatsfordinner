@@ -1,4 +1,15 @@
 
+//header navigation
+
+const mainnav = document.querySelector('.navigation');
+const hamburger = document.querySelector('#menu');
+
+hamburger.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hamburger.classList.toggle('show');
+})
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const savedRecipes = JSON.parse(localStorage.getItem('selectedRecipes')) || [];
 
