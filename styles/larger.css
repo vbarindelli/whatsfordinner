@@ -121,6 +121,10 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
+    .card {
+        margin: 1em;
+    }
+
     .grid {
         max-width: 1200px;
         margin: auto;
