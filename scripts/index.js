@@ -7,7 +7,7 @@ const cards = document.querySelector('.cards');
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 
-const url = "http://www.themealdb.com/api/json/v1/1/search.php?f=b";
+const url = "https://www.themealdb.com/api/json/v1/1/search.php?f=b";
 
 
 const options = {
@@ -40,6 +40,11 @@ function displayResults(data) {
         let description = document.createElement('p');
         let recipeImg = document.createElement('img');
         let recipeButton = document.createElement('button');
+        let addToCalendarButton = document.createElement('button');
+        addToCalendarButton.textContent = 'Add to Calendar';
+        addToCalendarButton.classList.add('addToCalendarButton');
+
+        card.appendChild(addToCalendarButton);
 
 
         card.setAttribute('class', 'recipeSection');
@@ -66,9 +71,7 @@ function displayResults(data) {
         if (cards) {
             cards.appendChild(card);
         }
-        if (premium_cards) {
-            premium_cards.appendChild(card);
-        };
+
 
         recipeButton.addEventListener('click', () => {
             showModal(recipe);
@@ -141,7 +144,7 @@ if (gridbutton) {
 };
 
 if (listbutton) {
-    listbutton.addEventListener("click", showList); // example using defined function
+    listbutton.addEventListener("click", showList);
 
     function showList() {
         cards.classList.add("list");
@@ -151,5 +154,32 @@ if (listbutton) {
 
 
 
+let selectedDay = null;
 
+// Highlight selected day
+document.querySelectorAll('.day').forEach(day => {
+    day.addEventListener('click', () => {
+        document.querySelectorAll('.day').forEach(d => d.classList.remove('selected-day'));
+        day.classList.add('selected-day');
+        selectedDay = day;
+    });
+});
+
+// Add recipe to selected day
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('addToCalendarButton')) {
+        if (!selectedDay) {
+            alert("Please select a day on the calendar first.");
+            return;
+        }
+
+        const recipeCard = e.target.closest('.recipeSection').cloneNode(true);
+
+        // Remove unnecessary buttons
+        recipeCard.querySelector('.recipeButton')?.remove();
+        recipeCard.querySelector('.addToCalendarButton')?.remove();
+
+        selectedDay.appendChild(recipeCard);
+    }
+});
 

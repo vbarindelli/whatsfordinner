@@ -39,49 +39,35 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="container-discover">
-            <section class="images">
-                <figure>
+  
+        <main id="directory">
+            <div id="gridList">
+                <button id="grid">⏹️Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <select id="filtered" title="Choose a data filter.">
+                <option value="" disabled selected>Search Recipes by</option>
+                <option value="firstLetter">First Letter</option>
+                <option value="ingredient">ingredient</option>
+                <option value="type">Category</option>
+                <option value="without">Without</option>
+             
+              </select>
+              <div>
+                <label for="userInput"></label>
+                <input type="text" id="userInput" name="userInput">
+              </div>
+              
+            <div class="cards grid"></div>
+            <div id="recipeModal" class="modal">
+                <div class="modal-content" id="modalContent"></div>
+            </div>
+        </main>
+        
+        
 
-                </figure>
-                <figure>
+       
 
-                </figure>
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-                <figure>
-
-                </figure>
-
-            </section>
-            <section class="information">
-                <section class="card">
-                    <h2>Nutrition Tip</h2>
-                    <p></p>
-                </section>
-                <section class="card">
-                    <h2>Recipes</h2>
-                    <ul>
-                        <li>Recipe 1</li>
-                        <li>Recipe 2</li>
-                        <li>Recipe 3</li>
-                    </ul>
-                </section>
-                <section class="card">
-                    <h2></h2>
-                </section>
-                <section class="card">
-                    <h2>Visit</h2>
-                    <p><span id="lastVisit"></span>
-                </section>
-            </section>
-        </div>
-    </main>
     <footer>
         <div class="footerContainer">
             <p>

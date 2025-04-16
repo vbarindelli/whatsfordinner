@@ -38,28 +38,16 @@
             </ul>
         </nav>
     </header>
-    <main id="directory">
-        <div id="gridList">
-            <button id="grid">⏹️Grid</button>
-            <button id="list">📄List</button>
-        </div>
-        <select id="filtered" title="Choose a data filter.">
-            <option value="" disabled selected>Search Recipes by</option>
-            <option value="firstLetter">First Letter</option>
-            <option value="ingredient">ingredient</option>
-            <option value="type">Category</option>
-            <option value="without">Without</option>
-         
-          </select>
-          <div>
-            <label for="userInput"></label>
-            <input type="text" id="userInput" name="userInput">
+    <main>
+        <div id="calendar">
+            <div class="day" data-day="Sunday">Sunday</div>
+            <div class="day" data-day="Monday">Monday</div>
+            <div class="day" data-day="Tuesday">Tuesday</div>
+            <div class="day" data-day="Wednesday">Wednesday</div>
+            <div class="day" data-day="Thursday">Thursday</div>
+            <div class="day" data-day="Friday">Friday</div>
+            <div class="day" data-day="Saturday">Saturday</div>
           </div>
-          
-        <div class="cards grid"></div>
-        <div id="recipeModal" class="modal">
-            <div class="modal-content" id="modalContent"></div>
-        </div>
     </main>
     <footer>
         <div class="footerContainer">
