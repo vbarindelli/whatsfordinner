@@ -195,10 +195,10 @@ document.querySelectorAll('.day').forEach(day => {
 // Add recipe to selected day
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('addToCalendarButton')) {
-        if (!selectedDay) {
-            alert("Please select a day on the calendar first.");
-            return;
-        }
+        // if (!selectedDay) {
+        //     alert("Please select a day on the calendar first.");
+        //     return;
+        // }
 
         const recipeCard = e.target.closest('.recipeSection');
         const recipeData = {
