@@ -99,7 +99,6 @@ function displayResults(data) {
         addToCalendarButton.textContent = 'Add to Calendar';
         addToCalendarButton.classList.add('addToCalendarButton');
 
-        card.appendChild(addToCalendarButton);
 
 
         card.setAttribute('class', 'recipeSection');
@@ -120,6 +119,8 @@ function displayResults(data) {
         card.appendChild(recipeImg);
         card.appendChild(description);
         card.appendChild(recipeButton);
+        card.appendChild(addToCalendarButton);
+
 
 
 
@@ -134,8 +135,6 @@ function displayResults(data) {
     });
 
 };
-
-//show full recipe 
 
 function showModal(recipe) {
     const modal = document.querySelector('#recipeModal');
@@ -188,17 +187,11 @@ function showModal(recipe) {
 
     modal.appendChild(modalContent);
     modal.classList.add('show');
-
 }
 
-//close modal when clicking outside of popup window
 
-window.addEventListener('click', (e) => {
-    const modal = document.querySelector('#recipeModal');
-    if (e.target === modal) {
-        modal.classList.remove('show');
-    }
-});
+//show full recipe 
+
 
 
 //select a day on the calendar to add the recipe to

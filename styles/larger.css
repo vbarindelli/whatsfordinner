@@ -22,23 +22,6 @@
         display: none;
     }
 
-    .featuredContent {
-        position: relative;
-        height: auto;
-        display: grid;
-
-    }
-
-    .featured {
-        display: flex;
-    }
-
-    .featured .memberSection {
-        min-width: 200px;
-        max-width: 300px;
-        min-height: 280px;
-    }
-
     .containerIndex {
         position: relative;
         height: auto;
@@ -72,7 +55,13 @@
     }
 
     .spotlights {
-        grid-column: 1/4;
+
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        background: rgba(252, 252, 252, 0.8);
+        color: black;
+        margin: 1em;
+        align-items: center;
     }
 
     picture img {
@@ -122,11 +111,6 @@
     #benefits {
         display: inline-table;
         grid-column: 2/3;
-
-    }
-
-    #directory {
-        margin: auto;
 
     }
 

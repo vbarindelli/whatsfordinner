@@ -1,6 +1,5 @@
 
 //header navigation
-
 const mainnav = document.querySelector('.navigation');
 const hamburger = document.querySelector('#menu');
 
@@ -24,19 +23,23 @@ window.addEventListener('DOMContentLoaded', () => {
         const category = document.createElement('p');
         const img = document.createElement('img');
         const removeButton = document.createElement('button');
+        const favoriteButton = document.createElement('button');
 
         name.textContent = recipe.name;
         category.textContent = recipe.category;
         img.src = recipe.img;
         img.width = 200;
 
-        removeButton.textContent = 'X';
+        removeButton.textContent = 'Remove';
         removeButton.classList.add('removeButton');
+
+        favoriteButton.textContent = 'Add to Favorites';
 
         card.appendChild(name);
         card.appendChild(img);
         card.appendChild(category);
         card.appendChild(removeButton);
+        card.appendChild(favoriteButton);
 
         const dayContainer = document.getElementById(recipe.dayId);
         if (dayContainer) {
@@ -48,6 +51,23 @@ window.addEventListener('DOMContentLoaded', () => {
             const updatedRecipes = savedRecipes.filter(r => !(r.name === recipe.name && r.dayId === recipe.dayId));
             localStorage.setItem('selectedRecipes', JSON.stringify(updatedRecipes));
             location.reload(); // Refresh ingredients list too
+        });
+        favoriteButton.addEventListener('click', () => {
+            let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+
+            // Avoid duplicates
+            const isAlreadyFavorite = favorites.some(
+                fav => fav.name === recipe.name
+            );
+
+            if (!isAlreadyFavorite) {
+                favorites.push(recipe);
+                localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
+                favoriteButton.textContent = 'Favorited ✓';
+                favoriteButton.disabled = true;
+            } else {
+                alert("This recipe is already in your favorites.");
+            }
         });
 
         // Fetch full data from TheMealDB for ingredients (based on recipe name)
