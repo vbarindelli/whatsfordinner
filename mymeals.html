@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/mymeals.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Andalucia Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -42,28 +42,29 @@
         <div class="myMeals-container">
             <div class="calendar">
                 <div class="day" id="day-monday">
-                    <h3>Monday</h3>
+                    <h3>Monday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-tuesday">
-                    <h3>Tuesday</h3>
+                    <h3>Tuesday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-wednesday">
-                    <h3>Wednesday</h3>
+                    <h3>Wednesday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-thursday">
-                    <h3>Thursday</h3>
+                    <h3>Thursday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-friday">
-                    <h3>Friday</h3>
+                    <h3>Friday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-saturday">
-                    <h3>Saturday</h3>
+                    <h3>Saturday<span class="date-label"></span></h3>
                 </div>
                 <div class="day" id="day-sunday">
-                    <h3>Sunday</h3>
+                    <h3>Sunday<span class="date-label"></span></h3>
                 </div>
+                <button id="clearMeals">Clear All</button>
             </div>
-            <button id="clearMeals">Clear All</button>
+
             <section class="ingredientsList">
                 <section class="card">
                     <h2>List of Ingredients</h2>
